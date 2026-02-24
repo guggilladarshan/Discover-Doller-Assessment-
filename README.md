@@ -1,31 +1,7 @@
 <<<<<<< HEAD
 Containerization & Deployment
 
-The application has been fully containerized and deployed on a cloud Ubuntu server. Here's the workflow:
-
-Dockerization:
-
-Created separate Dockerfiles for the backend and frontend.
-
-Built images locally and pushed them to Docker Hub:
-
-Cloud VM Setup:
-
-Launched an Ubuntu server on a cloud platform (AWS, Azure, or GCP).
-
-Installed Docker and Docker Compose on the server.
-
-Docker Compose Deployment:
-
-Created a docker-compose.yml on the server.
-
-The compose file includes three services:
-
-MongoDB – database container.
-
-Backend – pulls the backend image from Docker Hub.
-
-Frontend – pulls the frontend image from Docker Hub.
+I created separate Dockerfiles for the backend and frontend, built the images locally, and pushed them to Docker Hub. On AWS, I launched an Ubuntu server, installed Docker and Docker Compose, and created a docker-compose.yml file defining three services: MongoDB as the database container, the backend pulling its image from Docker Hub and connecting to MongoDB, and the frontend pulling its image from Docker Hub and connecting to the backend. When deployed, the MongoDB container starts first, followed by the backend and frontend, and all services run successfully, making the full MEAN stack application live.
 
 
 Result:
