@@ -1,33 +1,39 @@
 <<<<<<< HEAD
-In this DevOps task, you need to build and deploy a full-stack CRUD application using the MEAN stack (MongoDB, Express, Angular 15, and Node.js). The backend will be developed with Node.js and Express to provide REST APIs, connecting to a MongoDB database. The frontend will be an Angular application utilizing HTTPClient for communication.  
+Containerization & Deployment
 
-The application will manage a collection of tutorials, where each tutorial includes an ID, title, description, and published status. Users will be able to create, retrieve, update, and delete tutorials. Additionally, a search box will allow users to find tutorials by title.
+The application has been fully containerized and deployed on a cloud Ubuntu server. Here's the workflow:
 
-## Project setup
+Dockerization:
 
-### Node.js Server
+Created separate Dockerfiles for the backend and frontend.
 
-cd backend
+Built images locally and pushed them to Docker Hub:
 
-npm install
+Cloud VM Setup:
 
-You can update the MongoDB credentials by modifying the `db.config.js` file located in `app/config/`.
+Launched an Ubuntu server on a cloud platform (AWS, Azure, or GCP).
 
-Run `node server.js`
+Installed Docker and Docker Compose on the server.
 
-### Angular Client
+Docker Compose Deployment:
 
-cd frontend
+Created a docker-compose.yml on the server.
 
-npm install
+The compose file includes three services:
 
-Run `ng serve --port 8081`
+MongoDB – database container.
 
-You can modify the `src/app/services/tutorial.service.ts` file to adjust how the frontend interacts with the backend.
+Backend – pulls the backend image from Docker Hub.
 
-Navigate to `http://localhost:8081/`
-=======
-# project-new
->>>>>>> a4fccd008b0075854777f4fb087cefbebdd6537d
-# Discover-Doller-Assessment-
-# Discover-Doller-Assessment-
+Frontend – pulls the frontend image from Docker Hub.
+
+
+Result:
+
+MongoDB container starts first.
+
+Backend pulls the image from Docker Hub and connects to MongoDB.
+
+Frontend pulls the image from Docker Hub and connects to the backend.
+
+All services run successfully, making the full MEAN stack application live.
