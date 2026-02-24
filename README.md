@@ -16,14 +16,14 @@ All services run successfully, making the full MEAN stack application live.
 
 
 
-
+...
 
 
 
 <<<<<<<<<<<  HEAD
 Jenkins CI/CD Pipeline for MEAN Stack Application
 
-CI/CD pipeline using Jenkins to automate the build, Dockerization, and deployment of a MEAN stack (MongoDB, Express, Angular, Node.js) CRUD application.
+CI/CD pipeline using Jenkins to automate the build, Dockerization, and deployment of a MEAN stack ( Angular, Node.js) CRUD application.
 
 
 The Jenkins pipeline automates the following steps:
