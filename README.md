@@ -16,6 +16,10 @@ All services run successfully, making the full MEAN stack application live.
 
 
 
+
+
+
+
 <<<<<<<<<<<  HEAD
 Jenkins CI/CD Pipeline for MEAN Stack Application
 
@@ -45,6 +49,8 @@ Builds separate Docker images for the backend and frontend using their respectiv
 
 Logs into Docker Hub and pushes the newly built images.
 
+4. Deploy Application on Server
 
+into the Ubuntu server Application Deploy successfully 
 
 
