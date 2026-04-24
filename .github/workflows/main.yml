@@ -24,7 +24,7 @@ jobs:
       - name: Build Docker images
         run: |
           cd backend 
-          docker build .
+          docker build . 
           
       - name: Build Docker images
         run: |
