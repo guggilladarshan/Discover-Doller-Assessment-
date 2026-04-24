@@ -1,0 +1,34 @@
+name: Deploy to EC2 (Self-hosted)
+
+on:
+  push:
+    branches:
+      - main   # change if your branch is different
+
+jobs:
+  deploy:
+    runs-on: self-hosted   # VERY IMPORTANT (your EC2 runner)
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Stop existing containers
+        run: |
+          docker-compose down || true
+
+      - name: Remove old images (optional)
+        run: |
+          docker system prune -af || true
+
+      - name: Build Docker images
+        run: |
+          docker-compose build
+
+      - name: Start containers
+        run: |
+          docker-compose up -d
+
+      - name: Verify running containers
+        run: |
+          docker ps
