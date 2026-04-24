@@ -24,12 +24,12 @@ jobs:
       - name: Build Docker images
         run: |
           sudo cd backend 
-          docker build . 
+          sudo docker build . 
           
       - name: Build Docker images
         run: |
           sudo cd frontend
-          docker build .
+          sudo docker build .
       - name: Start containers
         run: |
           docker-compose up -d
