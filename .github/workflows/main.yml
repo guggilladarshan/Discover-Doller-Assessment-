@@ -23,8 +23,13 @@ jobs:
 
       - name: Build Docker images
         run: |
+          cd backend 
           docker build .
-
+          
+      - name: Build Docker images
+        run: |
+          cd frontend
+          docker build .
       - name: Start containers
         run: |
           docker-compose up -d
