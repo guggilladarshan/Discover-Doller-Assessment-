@@ -23,12 +23,12 @@ jobs:
 
       - name: Build Docker images
         run: |
-          cd backend 
+          sudo cd backend 
           docker build . 
           
       - name: Build Docker images
         run: |
-          cd frontend
+          sudo cd frontend
           docker build .
       - name: Start containers
         run: |
