@@ -31,7 +31,8 @@ jobs:
             sudo docker build -t frontend-image .
       - name: Deploy
         run: |
-           sudo docker-compose up -d
+            sudo docker-compose down || true
+            sudo DOCKER_BUILDKIT=0 docker-compose up -d --build
       - name: Verify running containers
         run: |
           docker ps
