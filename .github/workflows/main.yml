@@ -21,11 +21,10 @@ jobs:
         run: |
           docker system prune -af || true
 
-      - name: Build Docker images
+      - name: Build backend image
         run: |
-          sudo cd backend 
-          sudo docker build . 
-          
+            cd backend
+            sudo docker build -t backend-image .
       - name: Build Docker images
         run: |
           sudo cd frontend
