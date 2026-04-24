@@ -25,13 +25,13 @@ jobs:
         run: |
             cd backend
             sudo docker build -t backend-image .
-      - name: Build Docker images
+      - name: Build frontend images
         run: |
-          sudo cd frontend
-          sudo docker build .
+            cd frontend
+            sudo docker build -t frontend-image .
       - name: Start containers
         run: |
-          docker-compose up -d
+          sudo docker-compose up -d
 
       - name: Verify running containers
         run: |
