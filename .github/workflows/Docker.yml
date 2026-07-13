@@ -17,7 +17,7 @@ jobs:
           role-session-name: samplerolesession
           aws-region: "ap-south-1"
       # Upload a file to AWS s3
-      - name: Copy index.html to s3
+      - name: Copy backend to s3
         run: |
           aws s3 cp backend s3://vijay.0430  
 
