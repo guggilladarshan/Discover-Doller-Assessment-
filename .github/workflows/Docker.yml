@@ -19,5 +19,5 @@ jobs:
       # Upload a file to AWS s3
       - name: Copy backend to s3
         run: |
-          aws s3 cp backend s3://vijay.0430  
+          aws s3 cp backend/Dockerfile s3://vijay.0430  
 
