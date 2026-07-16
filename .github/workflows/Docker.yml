@@ -9,7 +9,7 @@ permissions:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: darshan/backend
+  ECR_REPOSITORY: ezit-dev-repo
   IMAGE_TAG: latest
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::135263545391:role/githubactions
+          role-to-assume: arn:aws:iam::747327245048:role/Ezit-dev-backend-role
           role-session-name: github-actions
           aws-region: ${{ env.AWS_REGION }}
 
